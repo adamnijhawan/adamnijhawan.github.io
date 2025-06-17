@@ -3,42 +3,50 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LaTeX Styled Site</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/cmu-serif@4.5.9/index.min.css" />
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script id="MathJax-script" async
-    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <title>Computer Modern Web Fonts</title>
+
   <style>
+    @font-face {
+      font-family: "Computer Modern";
+      src: url("fonts/cmunss.otf") format("opentype");
+    }
+
+    @font-face {
+      font-family: "Computer Modern";
+      src: url("fonts/cmunsx.otf") format("opentype");
+      font-weight: bold;
+    }
+
+    @font-face {
+      font-family: "Computer Modern";
+      src: url("fonts/cmunsi.otf") format("opentype");
+      font-style: italic;
+    }
+
+    @font-face {
+      font-family: "Computer Modern";
+      src: url("fonts/cmunbxo.otf") format("opentype");
+      font-weight: bold;
+      font-style: italic;
+    }
+
     body {
-      font-family: 'CMU Serif', serif;
+      font-family: "Computer Modern", serif;
       max-width: 700px;
       margin: 3em auto;
-      padding: 0 1em;
       line-height: 1.6;
       font-size: 17px;
-      background-color: #ffffff;
-      color: #000000;
+      padding: 0 1em;
     }
-    h1, h2, h3 {
+
+    h1, h2 {
       font-weight: normal;
-    }
-    code {
-      background-color: #f4f4f4;
-      padding: 0.2em 0.4em;
-      border-radius: 4px;
-    }
-    a {
-      color: #0077cc;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <h1>Welcome to My LaTeX-Styled Website</h1>
-  <p>This website uses the CMU Serif font, a faithful digital match to LaTeX's Computer Modern.</p>
-  <p>Here’s some math rendered with MathJax: \( E = mc^2 \)</p>
+  <h1>Welcome to LaTeX-Styled Web Typography</h1>
+  <p>This text is set in the original Computer Modern font used by LaTeX.</p>
+  <p><strong>This is bold text</strong>, <em>this is italic text</em>, and <strong><em>this is bold italic text</em></strong>.</p>
 </body>
 </html>
