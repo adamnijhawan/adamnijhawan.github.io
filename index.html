@@ -1,28 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Adam Nijhawan</title>
 
+  <!-- Font: Computer Modern Unicode (self-hosted) -->
   <style>
     @font-face {
       font-family: "Computer Modern";
       src: url("fonts/cmunss.otf") format("opentype");
     }
-
     @font-face {
       font-family: "Computer Modern";
       src: url("fonts/cmunsx.otf") format("opentype");
       font-weight: bold;
     }
-
     @font-face {
       font-family: "Computer Modern";
       src: url("fonts/cmunsi.otf") format("opentype");
       font-style: italic;
     }
-
     @font-face {
       font-family: "Computer Modern";
       src: url("fonts/cmunbxo.otf") format("opentype");
@@ -30,23 +28,152 @@
       font-style: italic;
     }
 
-    body {
-      font-family: "Computer Modern", serif;
-      max-width: 700px;
-      margin: 3em auto;
-      line-height: 1.6;
-      font-size: 17px;
-      padding: 0 1em;
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #111111;
+      --link-color: #0645ad;
+      --accent-color: #dddddd;
     }
 
-    h1, h2 {
+    [data-theme="dark"] {
+      --bg-color: #1c1c1c;
+      --text-color: #f0f0f0;
+      --link-color: #58a6ff;
+      --accent-color: #333333;
+    }
+
+    body {
+      font-family: "Computer Modern", serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      max-width: 800px;
+      margin: 4em auto;
+      padding: 0 2em;
+      line-height: 1.75;
+      font-size: 17px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    h1, h2, h3 {
       font-weight: normal;
+      margin-top: 2em;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 0.2em;
+    }
+
+    h2 {
+      font-size: 1.75em;
+      border-bottom: 1px solid var(--accent-color);
+      padding-bottom: 0.3em;
+    }
+
+    a {
+      color: var(--link-color);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .section {
+      margin-bottom: 2.5em;
+    }
+
+    ul {
+      padding-left: 1.2em;
+    }
+
+    .pub-title {
+      font-style: italic;
+    }
+
+    .theme-toggle {
+      position: fixed;
+      top: 1em;
+      right: 1em;
+      background: var(--accent-color);
+      border: none;
+      padding: 0.5em 0.8em;
+      font-size: 0.9em;
+      cursor: pointer;
+      border-radius: 5px;
+      color: var(--text-color);
     }
   </style>
 </head>
 <body>
-  <h1>Welcome to my website</h1>
-  <p>Stay tuned...</p>
-  <p><strong>This is bold text</strong>, <em>this is italic text</em>, and <strong><em>this is bold italic text</em></strong>.</p>
+
+  <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+
+  <h1>Adam Nijhawan</h1>
+  <p>PhD Candidate in Physical Chemistry | Structural Biophysics & Machine Learning</p>
+
+  <div class="section">
+    <h2>About</h2>
+    <p>I study the structure and dynamics of biomolecules using small-angle X-ray scattering, time-resolved spectroscopy, and molecular simulations. My current work focuses on structural ensemble modeling and generative ML approaches to explore protein and RNA folding.</p>
+  </div>
+
+  <div class="section">
+    <h2>Research Interests</h2>
+    <ul>
+      <li>Structural biology and SAXS/SANS</li>
+      <li>Protein and RNA dynamics</li>
+      <li>Molecular dynamics simulations</li>
+      <li>Machine learning for molecular design</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Publications</h2>
+    <p><strong>A. Nijhawan</strong>, X. Author. <span class="pub-title">FoldingDiff: Diffusion Models for De Novo Protein Backbone Generation</span>. <em>bioRxiv</em>, 2024.</p>
+    <p><strong>A. Nijhawan</strong>, B. Smith. <span class="pub-title">THz Spectroscopy Reveals Solvation Shell Dynamics of RNA</span>. <em>J. Phys. Chem. B</em>, 2023.</p>
+  </div>
+
+  <div class="section">
+    <h2>Teaching</h2>
+    <ul>
+      <li>Instructor, Biophysical Chemistry (CHEM 350), Spring 2024</li>
+      <li>TA, Advanced Spectroscopy Techniques, Fall 2023</li>
+      <li>Mentored undergraduates in MD simulation projects</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Projects</h2>
+    <ul>
+      <li><strong>SoT (Soccer Ticker)</strong> — App for tracking lower-league soccer in the U.S.</li>
+      <li><strong>RNA Ensemble Builder</strong> — Python tool for SAXS- and MD-based structural modeling</li>
+      <li><strong>AutomateRNA</strong> — NAMD+AmberTools pipeline for REST2 simulations</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Hobbies</h2>
+    <p>Outside of research, I run a semi-professional soccer club in Chicago and enjoy visual storytelling, hiking, and typography. I'm also passionate about science education and building accessible scientific software.</p>
+  </div>
+
+  <div class="section">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:adam.nijhawan@example.com">adam.nijhawan@example.com</a></p>
+    <p>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
+    <p>CV: <a href="cv.pdf" target="_blank">Download PDF</a></p>
+  </div>
+
+  <script>
+    function toggleTheme() {
+      const current = document.documentElement.getAttribute("data-theme");
+      const next = current === "dark" ? "light" : "dark";
+      document.documentElement.setAttribute("data-theme", next);
+      localStorage.setItem("theme", next);
+    }
+
+    // Load saved theme
+    const savedTheme = localStorage.getItem("theme") || "light";
+    document.documentElement.setAttribute("data-theme", savedTheme);
+  </script>
 </body>
 </html>
