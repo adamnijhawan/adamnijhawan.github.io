@@ -103,14 +103,41 @@
       border-radius: 5px;
       color: var(--text-color);
     }
+
+    .header-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1em;
+      margin-bottom: 2em;
+    }
+
+    .text-container {
+      flex: 1;
+    }
+
+    .profile-photo {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%; /* makes it circular */
+      border: 2px solid var(--accent-color);
+    }
+
   </style>
 </head>
 <body>
 
   <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
 
-  <h1>Adam Nijhawan</h1>
-  <p>PhD in Physical Chemistry | Structural Biophysics & Machine Learning</p>
+  <div class="header-container">
+    <div class="text-container">
+      <h1>Adam Nijhawan</h1>
+      <p>PhD in Physical Chemistry | Structural Biophysics & Machine Learning</p>
+    </div>
+    <img src="profile.jpg" alt="Photo of Adam Nijhawan" class="profile-photo" />
+  </div>
+
 
   <div class="section">
     <h2>About</h2>
