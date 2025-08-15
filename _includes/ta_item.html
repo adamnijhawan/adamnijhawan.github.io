@@ -1,0 +1,15 @@
+<li class="course">
+  <div class="course-grid">
+    <div class="course-code">{{ include.item.course_code }}</div>
+    <div class="course-main">
+      {% if include.item.link %}
+        <a href="{{ include.item.link }}" target="_blank" rel="noopener noreferrer">
+          <span class="course-title">{{ include.item.course_title }}</span>
+        </a>
+      {% else %}
+        <span class="course-title">{{ include.item.course_title }}</span>
+      {% endif %}
+      <span class="course-meta">— {{ include.item.institution }} · {{ include.item.term }}</span>
+    </div>
+  </div>
+</li>

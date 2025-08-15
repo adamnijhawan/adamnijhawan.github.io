@@ -61,6 +61,33 @@
     }
     .pub-links .pill:hover { text-decoration:underline; }
 
+    /* Teaching section */
+    .teaching-list, .awards-list { padding-left: 1.2em; margin: .8rem 0 0 0; }
+    .course { margin: .5rem 0 0 0; }
+    .course-grid {
+        display: grid;
+        grid-template-columns: 120px 1fr;
+        gap: .6rem 1rem;
+        align-items: baseline;
+    }
+    .course-code {
+        font-weight: bold;
+        white-space: nowrap;
+    }
+    .course-title {
+        
+    }
+    .course-meta {
+        margin-left: .35rem;
+        opacity: .8;
+    }
+    .award { margin: .3rem 0; }
+
+    /* Mobile */
+    @media (max-width: 640px) {
+        .course-grid { grid-template-columns: 1fr; }
+        .course-code { opacity: .9; }
+    }
 
   </style>
 </head>

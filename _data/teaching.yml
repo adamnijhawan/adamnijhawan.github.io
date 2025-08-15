@@ -1,0 +1,36 @@
+# _data/teaching.yml
+
+ta:
+  - course_code: "SPS 100"
+    course_title: "School of professional Studies Introduction to Chemistry TA"
+    institution: "Northwestern University"
+    term: "Spring 2022"
+    sort_key: 2022.3         # use 2025.3 (Fall), 2025.2 (Spring), 2025.1 (Winter/Summer) for sorting
+    link: ""                 # optional: syllabus or course page
+
+  - course_code: "CHEM 110"
+    course_title: "Introduction to Chemistry Recitation TA"
+    institution: "Northwestern University"
+    term: "Winter 2022"
+    sort_key: 2022.1
+    link: ""
+
+  - course_code: "CHEM 182"
+    course_title: "Advanced General Physical Chemistry Lab Super TA"
+    institution: "Northwestern University"
+    term: "Winter 2021"
+    sort_key: 2021.1
+    link: ""
+
+  - course_code: "CHEM 172"
+    course_title: "Advanced General Physical Chemistry Super TA"
+    institution: "Northwestern University"
+    term: "Winter 2020"
+    sort_key: 2020.1
+    link: ""
+awards:
+  - name: "L. Carroll King Award for Excellence in 100-Level Teaching"
+    organization: "Northwestern University, Department of Chemistry"
+    year: 2020
+    link: ""   # optional: announcement or certificate URL
+    note: ""   # optional: short description (e.g., "Top 5% of TAs")
