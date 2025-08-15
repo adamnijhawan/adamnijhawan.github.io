@@ -1,0 +1,5 @@
+title: "Adam Nijhawan"
+url: "https://adamnijhawan.github.io"
+baseurl: ""                 # keep empty for a user site
+markdown: kramdown
+permalink: /blog/:year/:month/:day/:title/

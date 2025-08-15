@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>{{ page.title }} | {{ site.title }}</title>
+
+  <!-- Font: Computer Modern Unicode (self-hosted) -->
+  <style>
+    @font-face { font-family: "Computer Modern"; src: url("/fonts/cmunss.otf") format("opentype"); }
+    @font-face { font-family: "Computer Modern"; src: url("/fonts/cmunsx.otf") format("opentype"); font-weight: bold; }
+    @font-face { font-family: "Computer Modern"; src: url("/fonts/cmunsi.otf") format("opentype"); font-style: italic; }
+    @font-face { font-family: "Computer Modern"; src: url("/fonts/cmunbxo.otf") format("opentype"); font-weight: bold; font-style: italic; }
+
+    :root { --bg-color:#ffffff; --text-color:#111111; --link-color:#0645ad; --accent-color:#dddddd; }
+    [data-theme="dark"] { --bg-color:#1c1c1c; --text-color:#f0f0f0; --link-color:#58a6ff; --accent-color:#333333; }
+
+    body {
+      font-family: "Computer Modern", serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      max-width: 800px; margin: 4em auto; padding: 0 2em;
+      line-height: 1.75; font-size: 17px;
+      transition: background-color .3s, color .3s;
+    }
+    h1,h2,h3 { font-weight: normal; margin-top: 2em; }
+    h1 { font-size: 2.2em; margin-bottom: .4em; }
+    h2 { font-size: 1.6em; border-bottom: 1px solid var(--accent-color); padding-bottom: .3em; }
+    a { color: var(--link-color); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .theme-toggle {
+      position: fixed; top: 1em; right: 1em;
+      background: var(--accent-color); border: none; padding: .5em .8em;
+      font-size: .9em; cursor: pointer; border-radius: 5px; color: var(--text-color);
+    }
+    /* Simple site header/nav */
+    .site-header { display:flex; align-items:center; justify-content:space-between; gap:1em; margin-bottom:2em; }
+    .site-title { margin:0; font-size: 1.6em; }
+    nav a { margin-right: 1rem; }
+    /* Blog polish */
+    .post { margin: 2rem 0; padding-bottom: 1.5rem; border-bottom: 1px solid var(--accent-color); }
+    .post-title { margin: 0 0 .3rem 0; }
+    .post-meta { opacity:.7; font-size:.95rem; }
+    .tag { font-size:.85rem; padding:.1rem .4rem; border:1px solid var(--accent-color); border-radius:.4rem; margin-right:.35rem; }
+  </style>
+</head>
+<body>
+  <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+
+  <header class="site-header">
+    <h1 class="site-title"><a href="/">{{ site.title }}</a></h1>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/blog/">Arsenal Blog</a>
+      <a href="/cv.pdf" target="_blank">CV</a>
+      <a href="mailto:adam.nijhawan@gmail.com">Email</a>
+      <a href="https://github.com/adamnijhawan" target="_blank">GitHub</a>
+    </nav>
+  </header>
+
+  <main>
+    {{ content }}
+  </main>
+
+  <script>
+    function toggleTheme() {
+      const current = document.documentElement.getAttribute("data-theme");
+      const next = current === "dark" ? "light" : "dark";
+      document.documentElement.setAttribute("data-theme", next);
+      localStorage.setItem("theme", next);
+    }
+    const savedTheme = localStorage.getItem("theme") || "light";
+    document.documentElement.setAttribute("data-theme", savedTheme);
+  </script>
+</body>
+</html>
