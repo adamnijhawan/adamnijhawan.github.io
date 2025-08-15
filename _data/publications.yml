@@ -1,0 +1,78 @@
+# _data/publications.yml
+- title: "Characterizing Ultrafast Intersystem Crossing Pathways in MOlecular Pt Dimers Using Time-Resolved Wide-Angle X-ray Scattering"
+  authors: "M. W. Mara, D. Leshchev, N. P. Weingartz, A. M. Chan, <strong>A. K. Nijhawan</strong>, A. J. S. Valentine, X. Liu, S. Kromer, D. J. Hsu, P. Kim, E. Biasin, T. B. van Driel, F. N. Castellano, X. Li, L. X. Chen"
+  journal: "J. Am. Chem. Soc."
+  year: 2025
+  volume: 16
+  issue: 28
+  pages: "7120-7126"
+  url: "https://pubs.acs.org/doi/full/10.1021/acs.jpclett.5c01245"
+  doi: "https://doi.org/10.1021/acs.jpclett.5c01245"
+  featured: true
+
+- title: "Millisecond Phase Transition Kinetics of Lyotropic Liquid Crystalline Nanoparticles Observed by Time-Resolved Small Angle X-ray Solution Scattering"
+  authors: "C. Lee, A. M. Chan, <strong>A. K. Nijhawan</strong>, M. B. Ho, I. Kosheleva, L. X. Chen"
+  journal: "ChemPhysChem"
+  year: 2025
+  volume: 26
+  issue: 14
+  url: "https://chemistry-europe.onlinelibrary.wiley.com/doi/10.1002/cphc.202401072"
+  doi: "http://doi.org/10.1002/cphc.202401072"
+  featured: true
+
+- title: "Unfolding of the Villin Headpiece Domain: Revealing Structural Heterogeneity with Time-Resolved X-ray Solution Scattering and Markov State Modeling"
+  authors: "<strong>A. K. Nijhawan</strong>, A. M. Chan, M. B. Ho, C. Lee, I. Kosheleva, L. X. Chen, K. L. Kohlstedt"
+  journal: "ChemPhysChem"
+  year: 2025
+  volume: 26
+  issue: 12
+  url: "https://chemistry-europe.onlinelibrary.wiley.com/doi/full/10.1002/cphc.202500049"
+  doi: "https://doi.org/10.1002/cphc.202500049"
+  featured: true
+
+- title: "Early Folding Dynamics of i-Motif DNA Revealed by pH-Jump Time-Resolved X-ray Solution Scattering"
+  authors: "A. M. Chan, S. Ebrahimmi, D. Samanta, D. Leshchev, <strong>A. K. Nijhawan</strong>, D. J. Hsu, M. Ho, N. Ramani, I. Koshelva, R. Henning, C. Mirkin, K. L. Kohlstedt, L. X. Chen"
+  journal: "J. Am. Chem. Soc."
+  year: 2024
+  volume: 146
+  issue: 49
+  pages: "33743–33752"
+  url: "https://pubs.acs.org/doi/full/10.1021/jacs.4c11768"
+  doi: "https://doi.org/10.1021/jacs.4c11768"
+  featured: true
+
+
+- title: "Unlocking the unfolded structure of ubiquitin: Combining time-resolved X-ray solution scattering and molecular dynamics to generate unfolded ensembles"
+  authors: "<strong>A. K. Nijhawan</strong>, D. Leshchev, D. J. Hsu, A. M. Chan, D. Rimmerman, J. Hong, I. Kosheleva, R. Henning, K. L. Kohlstedt, L. X. Chen"
+  journal: "J. Chem. Phys."
+  year: 2024
+  volume: 161
+  issue: 3
+  pages: "035101"
+  note: "Editor’s Choice; journal cover"
+  url: "https://pubs.aip.org/aip/jcp/article/161/3/035101/3303367"
+  doi: "https://doi.org/10.1063/5.0217013"
+  featured: true
+
+- title: "The role of transient intermediate structures in the unfolding of the Trp-Cage fast-folding protein: Generating ensembles from time-resolved X-ray solution scattering with genetic algorithms"
+  authors: "A. M. Chan, <strong>A. K. Nijhawan</strong>, D. J. Hsu, D. Leshchev, D. Rimmerman, I. Kosheleva, K. L. Kohlstedt, L. X. Chen"
+  journal: "J. Phys. Chem. Lett."
+  year: 2023
+  volume: 14
+  issue: 5
+  pages: "1133–1139"
+  url: "https://pubs.acs.org/doi/full/10.1021/acs.jpclett.2c03680"
+  doi: "https://doi.org/10.1021/acs.jpclett.2c03680"
+  featured: true
+
+- title: "Resolving dynamics in the ensemble: Finding paths through intermediate states and disordered protein structures"
+  authors: "<strong>A. K. Nijhawan</strong>, A. M. Chan, D. J. Hsu, L. X. Chen, K. L. Kohlstedt"
+  journal: "J. Phys. Chem. B"
+  year: 2021
+  volume: 125
+  issue: 45
+  pages: "12401–12412"
+  url: "https://pubs.acs.org/doi/full/10.1021/acs.jpcb.1c05820"
+  doi: "https://doi.org/10.1021/acs.jpcb.1c05820"
+  featured: true
+

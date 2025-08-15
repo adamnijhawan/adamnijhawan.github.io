@@ -53,18 +53,16 @@ title: Home
 </div>
 
 <div class="section">
-  <h2>Publications</h2>
-
-  <p><strong>1.</strong> A. M. Chan, S. Ebrahimmi, D. Samanta, D. Leshchev, <strong>A. K. Nijhawan</strong>, D. J. Hsu, M. Ho, N. Ramani, I. Koshelva, R. Henning, C. Mirkin, K. L. Kohlstedt, L. X. Chen. <span class="pub-title">Early folding dynamics of i-motif DNA revealed by pH-jump time-resolved X-ray solution scattering</span>. <em>J. Am. Chem. Soc.</em> <strong>2024</strong>, <em>146</em> (49), 33743–33752.</p>
-
-  <p><strong>2.</strong> C. Lee, A. M. Chan, <strong>A. K. Nijhawan</strong>, M. Ho, I. Kosheleva, A. Cheng, L. X. Chen. <span class="pub-title">Millisecond phase transition kinetics of lyotropic liquid crystalline nanoparticles observed by time-resolved small-angle X-ray solution scattering</span>. <em>J. Phys. Chem.</em> (submitted).</p>
-
-  <p><strong>3.</strong> <strong>A. K. Nijhawan</strong>, D. Leshchev, D. J. Hsu, A. M. Chan, D. Rimmerman, J. Hong, I. Kosheleva, R. Henning, K. L. Kohlstedt, L. X. Chen. <span class="pub-title">Unlocking the unfolded structure of ubiquitin: Combining time-resolved X-ray solution scattering and molecular dynamics to generate unfolded ensembles</span>. <em>J. Chem. Phys.</em> <strong>2024</strong>, <em>161</em>, 035101. <em>This manuscript received Editor’s Choice and was featured on the journal cover.</em></p>
-
-  <p><strong>4.</strong> <strong>A. K. Nijhawan</strong>, A. M. Chan, D. J. Hsu, L. X. Chen, K. L. Kohlstedt. <span class="pub-title">Resolving dynamics in the ensemble: Finding paths through intermediate states and disordered protein structures</span>. <em>J. Phys. Chem. B</em> <strong>2021</strong>, <em>125</em> (45), 12401–12412.</p>
-
-  <p><strong>5.</strong> A. M. Chan, <strong>A. K. Nijhawan</strong>, D. J. Hsu, D. Leshchev, D. Rimmerman, I. Kosheleva, K. L. Kohlstedt, L. X. Chen. <span class="pub-title">The role of transient intermediate structures in the unfolding of the Trp-Cage fast-folding protein: Generating ensembles from time-resolved X-ray solution scattering with genetic algorithms</span>. <em>J. Phys. Chem. Lett.</em> <strong>2023</strong>, <em>14</em> (5), 1133–1139.</p>
+  <h2>Selected Publications</h2>
+  {% assign selected = site.data.publications | where: "featured", true | sort: "year" | reverse %}
+  <ol>
+    {% for pub in selected %}
+      {% include pub.html pub=pub %}
+    {% endfor %}
+  </ol>
+  <p><a href="/publications/">View all publications →</a></p>
 </div>
+
 
 <div class="section">
   <h2>Teaching</h2>

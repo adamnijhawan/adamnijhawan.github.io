@@ -1,0 +1,17 @@
+{% comment %} Renders one publication from _data/publications.yml {% endcomment %}
+<li>
+  <span class="authors">{{ include.pub.authors }}</span>.
+  “<a href="{{ include.pub.url }}" target="_blank" rel="noopener noreferrer">
+    <span class="pub-title">{{ include.pub.title }}</span>
+  </a>.”
+  <em>{{ include.pub.journal }}</em>
+  {% if include.pub.year %} {{ include.pub.year }}{% endif %}{% if include.pub.volume %}, <em>{{ include.pub.volume }}</em>{% if include.pub.issue %} ({{ include.pub.issue }}){% endif %}{% endif %}{% if include.pub.pages %}, {{ include.pub.pages }}{% endif %}.
+  {% if include.pub.status %} <em>({{ include.pub.status }})</em>{% endif %}
+  {% if include.pub.note %} <em>{{ include.pub.note }}</em>{% endif %}
+  {% if include.pub.doi or include.pub.pdf %}
+    <span class="pub-links">
+      {% if include.pub.doi %}<a class="pill" href="https://doi.org/{{ include.pub.doi }}" target="_blank" rel="noopener">DOI</a>{% endif %}
+      {% if include.pub.pdf %}<a class="pill" href="{{ include.pub.pdf }}" target="_blank">PDF</a>{% endif %}
+    </span>
+  {% endif %}
+</li>
