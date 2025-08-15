@@ -1,13 +1,8 @@
 ---
 layout: default
-title: Welcome to the Arsenal section
-tags: [Arsenal, Tactics, Nutmegs]
+title: Welcome to the Arsenal Section, A brief Introduction
+tags: [Arsenal]
 ---
 
-Quick kickoff post with three promises:
+I am a lifelong Arsenal supporter and have always wanted to create an outlet that combines my passions for soccer, analytics, graphics, and the Arsenal. I have full intentions of publishing match previews/analysis, player ratings, interesting analytics, and match simulations to this blog. However, for now, posts will be at the mercy of my free time and will cover topics I find interesting related to the Arsenal.
 
-1. Match breakdowns with **one actionable insight** each.
-2. Youth & loans tracker with notes on pathway fit.
-3. Occasional data digressions (xThreat, box entries, press heat).
-
-COYG.
