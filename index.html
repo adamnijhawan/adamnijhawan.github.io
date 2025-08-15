@@ -1,221 +1,79 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Adam Nijhawan</title>
+---
+layout: default
+title: Home
+---
 
-  <!-- Font: Computer Modern Unicode (self-hosted) -->
-  <style>
-    @font-face {
-      font-family: "Computer Modern";
-      src: url("fonts/cmunss.otf") format("opentype");
-    }
-    @font-face {
-      font-family: "Computer Modern";
-      src: url("fonts/cmunsx.otf") format("opentype");
-      font-weight: bold;
-    }
-    @font-face {
-      font-family: "Computer Modern";
-      src: url("fonts/cmunsi.otf") format("opentype");
-      font-style: italic;
-    }
-    @font-face {
-      font-family: "Computer Modern";
-      src: url("fonts/cmunbxo.otf") format("opentype");
-      font-weight: bold;
-      font-style: italic;
-    }
-
-    :root {
-      --bg-color: #ffffff;
-      --text-color: #111111;
-      --link-color: #0645ad;
-      --accent-color: #dddddd;
-    }
-
-    [data-theme="dark"] {
-      --bg-color: #1c1c1c;
-      --text-color: #f0f0f0;
-      --link-color: #58a6ff;
-      --accent-color: #333333;
-    }
-
-    body {
-      font-family: "Computer Modern", serif;
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      max-width: 800px;
-      margin: 4em auto;
-      padding: 0 2em;
-      line-height: 1.75;
-      font-size: 17px;
-      transition: background-color 0.3s, color 0.3s;
-    }
-
-    h1, h2, h3 {
-      font-weight: normal;
-      margin-top: 2em;
-    }
-
-    h1 {
-      font-size: 2.5em;
-      margin-bottom: 0.2em;
-    }
-
-    h2 {
-      font-size: 1.75em;
-      border-bottom: 1px solid var(--accent-color);
-      padding-bottom: 0.3em;
-    }
-
-    a {
-      color: var(--link-color);
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .section {
-      margin-bottom: 2.5em;
-    }
-
-    ul {
-      padding-left: 1.2em;
-    }
-
-    .pub-title {
-      font-style: italic;
-    }
-
-    .theme-toggle {
-      position: fixed;
-      top: 1em;
-      right: 1em;
-      background: var(--accent-color);
-      border: none;
-      padding: 0.5em 0.8em;
-      font-size: 0.9em;
-      cursor: pointer;
-      border-radius: 5px;
-      color: var(--text-color);
-    }
-
-    .header-container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1em;
-      margin-bottom: 2em;
-    }
-
-    .text-container {
-      flex: 1;
-    }
-
-    .profile-photo {
-      width: 180px;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 50%; /* makes it circular */
-      border: 2px solid var(--accent-color);
-    }
-
-  </style>
-</head>
-<body>
-
-  <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
-
-  <div class="header-container">
-    <div class="text-container">
-      <h1>Adam Nijhawan</h1>
-      <p>PhD in Physical Chemistry | Structural Biophysics & Machine Learning | <a href="/blog/">Arsenal Blog</a></p>
-    </div>
-    <img src="profile.jpg" alt="Photo of Adam Nijhawan" class="profile-photo" />
+<div class="header-container">
+  <div class="text-container">
+    <p>
+      PhD in Physical Chemistry | Structural Biophysics &amp; Machine Learning
+      • <a href="/blog/">Arsenal Blog</a>
+    </p>
   </div>
-
-
-  <div class="section">
-    <h2>About</h2>
-    <p>I am working on structural prediction methods for RNA. My graduate school work involved time-resolved X-ray solutuion scattering of biological macromolecules. I used complementary molecular dynamics simulations to provide atomic level insight into the experimentally observed kinetic pathways.</p>
-  </div>
-
-  <div class="section">
-    <h2>Education</h2>
-    <p>Northwestern University; Advisors: Lin X. Chen and Kevin Kohlstedt.</p>
-    <p>Carleton College; Advisor: Daniela Kohen</p>
-  </div>
-
-  <div class="section">
-    <h2>Research Interests</h2>
-    <ul>
-      <li>Structural biology using SAXS/trSAXS</li>
-      <li>Protein and RNA dynamics and conformational ensembles</li>
-      <li>Molecular dynamics simulations of intrinisically disordered systems</li>
-      <li>Machine learning for structural prediction and ensemble heterogeneity</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>Publications</h2>
-
-    <p><strong>1.</strong> A. M. Chan, S. Ebrahimmi, D. Samanta, D. Leshchev, <strong>A. K. Nijhawan</strong>, D. J. Hsu, M. Ho, N. Ramani, I. Koshelva, R. Henning, C. Mirkin, K. L. Kohlstedt, L. X. Chen. <span class="pub-title">Early folding dynamics of i-motif DNA revealed by pH-jump time-resolved X-ray solution scattering</span>. <em>J. Am. Chem. Soc.</em> <strong>2024</strong>, <em>146</em> (49), 33743–33752.</p>
-
-    <p><strong>2.</strong> C. Lee, A. M. Chan, <strong>A. K. Nijhawan</strong>, M. Ho, I. Kosheleva, A. Cheng, L. X. Chen. <span class="pub-title">Millisecond phase transition kinetics of lyotropic liquid crystalline nanoparticles observed by time-resolved small-angle X-ray solution scattering</span>. <em>J. Phys. Chem.</em> (submitted).</p>
-
-    <p><strong>3.</strong> <strong>A. K. Nijhawan</strong>, D. Leshchev, D. J. Hsu, A. M. Chan, D. Rimmerman, J. Hong, I. Kosheleva, R. Henning, K. L. Kohlstedt, L. X. Chen. <span class="pub-title">Unlocking the unfolded structure of ubiquitin: Combining time-resolved X-ray solution scattering and molecular dynamics to generate unfolded ensembles</span>. <em>J. Chem. Phys.</em> <strong>2024</strong>, <em>161</em>, 035101. <em>This manuscript received Editor’s Choice and was featured on the journal cover.</em></p>
-
-    <p><strong>4.</strong> <strong>A. K. Nijhawan</strong>, A. M. Chan, D. J. Hsu, L. X. Chen, K. L. Kohlstedt. <span class="pub-title">Resolving dynamics in the ensemble: Finding paths through intermediate states and disordered protein structures</span>. <em>J. Phys. Chem. B</em> <strong>2021</strong>, <em>125</em> (45), 12401–12412.</p>
-
-    <p><strong>5.</strong> A. M. Chan, <strong>A. K. Nijhawan</strong>, D. J. Hsu, D. Leshchev, D. Rimmerman, I. Kosheleva, K. L. Kohlstedt, L. X. Chen. <span class="pub-title">The role of transient intermediate structures in the unfolding of the Trp-Cage fast-folding protein: Generating ensembles from time-resolved X-ray solution scattering with genetic algorithms</span>. <em>J. Phys. Chem. Lett.</em> <strong>2023</strong>, <em>14</em> (5), 1133–1139.</p>
+  <img src="profile.jpg" alt="Photo of Adam Nijhawan" class="profile-photo" />
 </div>
 
+<div class="section">
+  <h2>About</h2>
+  <p>I am working on structural prediction methods for RNA. My graduate school work involved time-resolved X-ray solution scattering of biological macromolecules. I used complementary molecular dynamics simulations to provide atomic level insight into the experimentally observed kinetic pathways.</p>
+</div>
 
-  <div class="section">
-    <h2>Teaching</h2>
-    <ul>
-      <li>Teaching Assistant:</li>
-      <li>Tutor:</li>
-      <li>Mentored undergraduates trSAXS analysis</li>
-    </ul>
-  </div>
+<div class="section">
+  <h2>Education</h2>
+  <p>Northwestern University; Advisors: Lin X. Chen and Kevin Kohlstedt.</p>
+  <p>Carleton College; Advisor: Daniela Kohen</p>
+</div>
 
-  <div class="section">
-    <h2>Projects</h2>
-    <ul>
-      <li><strong>SoT (Soccer Ticker)</strong> — App for tracking lower-league soccer in the U.S.</li>
-      <li><strong>BMC Assembly</strong> — assembly of BMCs with trSAXS</li>
-      <li><strong>RNA Structure Prediction</strong> — predicting RNA structure from sequence</li>
-    </ul>
-  </div>
+<div class="section">
+  <h2>Research Interests</h2>
+  <ul>
+    <li>Structural biology using SAXS/trSAXS</li>
+    <li>Protein and RNA dynamics and conformational ensembles</li>
+    <li>Molecular dynamics simulations of intrinsically disordered systems</li>
+    <li>Machine learning for structural prediction and ensemble heterogeneity</li>
+  </ul>
+</div>
 
-  <div class="section">
-    <h2>Hobbies</h2>
-    <p>Outside of research, I run a semi-professional soccer club in Chicago and enjoy cooking, playing saxophone, and live music.</p>
-  </div>
+<div class="section">
+  <h2>Publications</h2>
 
-  <div class="section">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:adam.nijhawan@gmail.com">adam.nijhawan@gmail.com</a></p>
-    <p>GitHub: <a href="https://github.com/adamnijhawan" target="_blank">github.com/adamnijhawan</a></p>
-    <p>CV: <a href="cv.pdf" target="_blank">Download PDF</a></p>
-  </div>
+  <p><strong>1.</strong> A. M. Chan, S. Ebrahimmi, D. Samanta, D. Leshchev, <strong>A. K. Nijhawan</strong>, D. J. Hsu, M. Ho, N. Ramani, I. Koshelva, R. Henning, C. Mirkin, K. L. Kohlstedt, L. X. Chen. <span class="pub-title">Early folding dynamics of i-motif DNA revealed by pH-jump time-resolved X-ray solution scattering</span>. <em>J. Am. Chem. Soc.</em> <strong>2024</strong>, <em>146</em> (49), 33743–33752.</p>
 
-  <script>
-    function toggleTheme() {
-      const current = document.documentElement.getAttribute("data-theme");
-      const next = current === "dark" ? "light" : "dark";
-      document.documentElement.setAttribute("data-theme", next);
-      localStorage.setItem("theme", next);
-    }
+  <p><strong>2.</strong> C. Lee, A. M. Chan, <strong>A. K. Nijhawan</strong>, M. Ho, I. Kosheleva, A. Cheng, L. X. Chen. <span class="pub-title">Millisecond phase transition kinetics of lyotropic liquid crystalline nanoparticles observed by time-resolved small-angle X-ray solution scattering</span>. <em>J. Phys. Chem.</em> (submitted).</p>
 
-    // Load saved theme
-    const savedTheme = localStorage.getItem("theme") || "light";
-    document.documentElement.setAttribute("data-theme", savedTheme);
-  </script>
-</body>
-</html>
+  <p><strong>3.</strong> <strong>A. K. Nijhawan</strong>, D. Leshchev, D. J. Hsu, A. M. Chan, D. Rimmerman, J. Hong, I. Kosheleva, R. Henning, K. L. Kohlstedt, L. X. Chen. <span class="pub-title">Unlocking the unfolded structure of ubiquitin: Combining time-resolved X-ray solution scattering and molecular dynamics to generate unfolded ensembles</span>. <em>J. Chem. Phys.</em> <strong>2024</strong>, <em>161</em>, 035101. <em>This manuscript received Editor’s Choice and was featured on the journal cover.</em></p>
+
+  <p><strong>4.</strong> <strong>A. K. Nijhawan</strong>, A. M. Chan, D. J. Hsu, L. X. Chen, K. L. Kohlstedt. <span class="pub-title">Resolving dynamics in the ensemble: Finding paths through intermediate states and disordered protein structures</span>. <em>J. Phys. Chem. B</em> <strong>2021</strong>, <em>125</em> (45), 12401–12412.</p>
+
+  <p><strong>5.</strong> A. M. Chan, <strong>A. K. Nijhawan</strong>, D. J. Hsu, D. Leshchev, D. Rimmerman, I. Kosheleva, K. L. Kohlstedt, L. X. Chen. <span class="pub-title">The role of transient intermediate structures in the unfolding of the Trp-Cage fast-folding protein: Generating ensembles from time-resolved X-ray solution scattering with genetic algorithms</span>. <em>J. Phys. Chem. Lett.</em> <strong>2023</strong>, <em>14</em> (5), 1133–1139.</p>
+</div>
+
+<div class="section">
+  <h2>Teaching</h2>
+  <ul>
+    <li>Teaching Assistant:</li>
+    <li>Tutor:</li>
+    <li>Mentored undergraduates trSAXS analysis</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>Projects</h2>
+  <ul>
+    <li><strong>SoT (Soccer Ticker)</strong> — App for tracking lower-league soccer in the U.S.</li>
+    <li><strong>BMC Assembly</strong> — assembly of BMCs with trSAXS</li>
+    <li><strong>RNA Structure Prediction</strong> — predicting RNA structure from sequence</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>Hobbies</h2>
+  <p>Outside of research, I run a semi-professional soccer club in Chicago and enjoy cooking, playing saxophone, and live music.</p>
+</div>
+
+<div class="section">
+  <h2>Contact</h2>
+  <p>Email: <a href="mailto:adam.nijhawan@gmail.com">adam.nijhawan@gmail.com</a></p>
+  <p>GitHub: <a href="https://github.com/adamnijhawan" target="_blank">github.com/adamnijhawan</a></p>
+  <p>CV: <a href="cv.pdf" target="_blank">Download PDF</a></p>
+</div>

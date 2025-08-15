@@ -17,8 +17,7 @@
 
     body {
       font-family: "Computer Modern", serif;
-      background-color: var(--bg-color);
-      color: var(--text-color);
+      background-color: var(--bg-color); color: var(--text-color);
       max-width: 800px; margin: 4em auto; padding: 0 2em;
       line-height: 1.75; font-size: 17px;
       transition: background-color .3s, color .3s;
@@ -28,15 +27,26 @@
     h2 { font-size: 1.6em; border-bottom: 1px solid var(--accent-color); padding-bottom: .3em; }
     a { color: var(--link-color); text-decoration: none; }
     a:hover { text-decoration: underline; }
+
     .theme-toggle {
       position: fixed; top: 1em; right: 1em;
       background: var(--accent-color); border: none; padding: .5em .8em;
       font-size: .9em; cursor: pointer; border-radius: 5px; color: var(--text-color);
     }
-    /* Simple site header/nav */
+
+    /* Global nav/header */
     .site-header { display:flex; align-items:center; justify-content:space-between; gap:1em; margin-bottom:2em; }
     .site-title { margin:0; font-size: 1.6em; }
     nav a { margin-right: 1rem; }
+
+    /* Homepage section styles (moved here for global reuse) */
+    .section { margin-bottom: 2.5em; }
+    ul { padding-left: 1.2em; }
+    .pub-title { font-style: italic; }
+    .header-container { display:flex; align-items:center; justify-content:space-between; gap:1em; margin-bottom:2em; }
+    .text-container { flex:1; }
+    .profile-photo { width:180px; height:180px; object-fit:cover; border-radius:50%; border:2px solid var(--accent-color); }
+
     /* Blog polish */
     .post { margin: 2rem 0; padding-bottom: 1.5rem; border-bottom: 1px solid var(--accent-color); }
     .post-title { margin: 0 0 .3rem 0; }
