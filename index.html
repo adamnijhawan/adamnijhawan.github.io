@@ -19,8 +19,27 @@ title: Home
 
 <div class="section">
   <h2>Education</h2>
-  <p>Northwestern University; Advisors: Lin X. Chen and Kevin Kohlstedt.</p>
-  <p>Carleton College; Advisor: Daniela Kohen</p>
+
+  <p>
+    <strong>Ph.D., Northwestern University</strong> — Advisors: Lin X. Chen &amp; Kevin Kohlstedt<br>
+    <em>Thesis:</em>
+    {% if site.thesis.url %}
+      <a href="{{ site.thesis.url }}" target="_blank" rel="noopener noreferrer">
+        <span class="pub-title">{{ site.thesis.title }}</span>
+      </a> ({{ site.thesis.year }})
+    {% elsif site.thesis.pdf %}
+      <a href="{{ site.thesis.pdf }}" target="_blank">
+        <span class="pub-title">{{ site.thesis.title }}</span>
+      </a> ({{ site.thesis.year }})
+    {% else %}
+      <span class="pub-title">{{ site.thesis.title }}</span> ({{ site.thesis.year }})
+    {% endif %}
+
+  </p>
+
+  <p>
+    <strong>B.A., Carleton College</strong> — Advisor: Daniela Kohen
+  </p>
 </div>
 
 <div class="section">
