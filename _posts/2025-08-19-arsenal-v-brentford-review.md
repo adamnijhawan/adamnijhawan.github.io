@@ -34,3 +34,8 @@ ratings:
     rating: 7.6
     blurb: "Match-winner; clever off-ball runs."
 ---
+
+{% include match_header.html %}
+{% include ratings.html ratings=page.ratings %}
+
+This will become the real test... Ødegaard
