@@ -1,0 +1,20 @@
+<div class="match-card">
+  <div class="match-line">
+    <span class="badge">{{ page.competition }}</span>
+    <span class="scoreline">{{ page.score }}</span>
+  </div>
+  <div class="match-meta">
+    <span>{{ page.venue }}</span>
+    {% if page.xg %}
+      <span>• xG: ARS {{ page.xg.arsenal }} — {{ page.xg.opponent }}</span>
+    {% endif %}
+  </div>
+
+  {% if page.goals %}
+    <ul class="goals-list">
+      {% for g in page.goals %}
+        <li><strong>{{ g.minute }}’</strong> — {{ g.team }}: {{ g.scorer }}{% if g.assist %} (asst. {{ g.assist }}){% endif %}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+</div>

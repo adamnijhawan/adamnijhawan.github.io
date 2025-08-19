@@ -1,0 +1,25 @@
+{% assign items = include.ratings | default: page.ratings %}
+<table class="ratings-table">
+  <thead>
+    <tr>
+      <th>Player</th>
+      <th class="num">Rating</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for p in items %}
+      {% assign r = p.rating | plus: 0 %}
+      {% if r >= 7.8 %}{% assign tier = "good" %}
+      {% elsif r >= 6.8 %}{% assign tier = "ok" %}
+      {% else %}{% assign tier = "poor" %}{% endif %}
+      <tr>
+        <td class="player">{{ p.name }}</td>
+        <td class="num">
+          <span class="rating-pill {{ tier }}">{{ r | round: 1 }}</span>
+        </td>
+        <td class="notes">{{ p.blurb }}</td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
