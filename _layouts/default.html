@@ -163,18 +163,38 @@
     .ratings-table th { text-align:left; opacity:.85; font-weight:600; }
     .ratings-table .num { width: 88px; text-align:center; white-space:nowrap; }
     .ratings-table .player { font-weight:600; }
-    .rating-pill {
-      display:inline-block; min-width: 2.6rem; text-align:center;
-      border:1px solid var(--accent-color); border-radius: .6rem; padding:.1rem .45rem;
-      font-variant-numeric: tabular-nums;
+    .ratings-table .section-row th {
+      text-align: left;
+      padding-top: .8rem;
+      border-bottom: 1px solid var(--accent-color);
+      font-weight: 700;
     }
-    .rating-pill.good { background: rgba(0,160,0,.10); }
-    .rating-pill.ok   { background: rgba(200,160,0,.10); }
-    .rating-pill.poor { background: rgba(200,0,0,.10); }
-
     /* Mobile */
     @media (max-width:640px){
       .ratings-table .notes { display:block; }
+    }
+    /* Gradient rating pill: red → beige → green (1..10, 5 ≈ beige) */
+    .rating-pill {
+      display:inline-block; min-width: 2.6rem; text-align:center;
+      padding:.1rem .45rem; border:1px solid var(--accent-color);
+      border-radius:.6rem; font-variant-numeric: tabular-nums;
+      background: #eee; /* fallback */
+    }
+
+    /* Colors (t is 0–100%) */
+    @supports (background: color-mix(in hsl, red 50%, green)) {
+      .rating-pill.phase1 {
+        /* 1..5: mix red → beige */
+        --from: hsl(0 80% 55%);       /* red */
+        --to:   #f5f5dc;              /* beige */
+        background: color-mix(in hsl, var(--from) calc(100% - var(--t)), var(--to) var(--t));
+      }
+      .rating-pill.phase2 {
+        /* 5..10: mix beige → green */
+        --from: #f5f5dc;              /* beige */
+        --to:   hsl(120 45% 40%);     /* green */
+        background: color-mix(in hsl, var(--from) calc(100% - var(--t)), var(--to) var(--t));
+      }
     }
 
   </style>

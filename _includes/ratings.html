@@ -1,25 +1,39 @@
 {% assign items = include.ratings | default: page.ratings %}
 <table class="ratings-table">
   <thead>
-    <tr>
-      <th>Player</th>
-      <th class="num">Rating</th>
-      <th>Notes</th>
-    </tr>
+    <tr><th>Player</th><th class="num">Rating</th><th>Notes</th></tr>
   </thead>
   <tbody>
     {% for p in items %}
-      {% assign r = p.rating | plus: 0 %}
-      {% if r >= 7.8 %}{% assign tier = "good" %}
-      {% elsif r >= 6.8 %}{% assign tier = "ok" %}
-      {% else %}{% assign tier = "poor" %}{% endif %}
-      <tr>
-        <td class="player">{{ p.name }}</td>
-        <td class="num">
-          <span class="rating-pill {{ tier }}">{{ r | round: 1 }}</span>
-        </td>
-        <td class="notes">{{ p.blurb }}</td>
-      </tr>
+      {% if p.section %}
+        <tr class="section-row">
+          <th colspan="3">{{ p.section }}</th>
+        </tr>
+      {% else %}
+        {% assign r = p.rating | plus: 0 %}
+        {% comment %}
+          Two-segment mix:
+          1..5  → red → beige   (t = (r-1)/4)   => class phase1
+          5..10 → beige → green (t = (r-5)/5)   => class phase2
+        {% endcomment %}
+        {% if r <= 5 %}
+          {% assign t = r | minus: 1 | divided_by: 4.0 %}
+          {% assign phase = "phase1" %}
+        {% else %}
+          {% assign t = r | minus: 5 | divided_by: 5.0 %}
+          {% assign phase = "phase2" %}
+        {% endif %}
+        <tr>
+          <td class="player">{{ p.name }}</td>
+          <td class="num">
+            <span class="rating-pill {{ phase }}" style="--t: {{ t | times: 100 | round }}%;">
+              {{ r | round: 1 }}
+            </span>
+          </td>
+          <td class="notes">{{ p.blurb }}</td>
+        </tr>
+      {% endif %}
     {% endfor %}
   </tbody>
 </table>
+
